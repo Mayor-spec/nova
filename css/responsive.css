@@ -1,9 +1,9 @@
 /* ==========================================================================
-   NOVATECH SOLUTIONS - RESPONSIVE LAYOUT ENGINE
-   Description: Overrides desktop grid metrics to enforce clean column stacking[span_1](start_span)[span_1](end_span).
+   NOVATECH SOLUTIONS - RESPONSIVE OVERRIDE ENGINE
+   Description: Intercepts desktop configurations and builds balanced responsive grids.
    ========================================================================== */
 
-/* --- Tablet Adaptations (1024px and below) --- */
+/* --- Tablet Structural Adaptation (1024px and below) --- */
 @media screen and (max-width: 1024px) {
     h1 { font-size: 2.5rem; }
     h2 { font-size: 2rem; }
@@ -21,16 +21,23 @@
         padding: 4rem 0;
     }
 
-    /* Force layouts to collapse layout rows and snap to single vertical columns[span_2](start_span)[span_2](end_span) */
+    .hero-home {
+        /* Compresses top spaces perfectly for smaller mobile header profiles */
+        padding: calc(var(--header-height) + 2rem) 0 4rem 0 !important;
+    }
+
+    /* Force desktop grid lines to drop side parameters and stack sequentially */
     .hero-grid-layout,
     .services-preview-grid,
-    .footer-grid {
+    .footer-grid,
+    .portfolio-grid,
+    .team-grid {
         grid-template-columns: 1fr !important;
         gap: 2.5rem !important;
         width: 100% !important;
     }
 
-    /* 2x2 counter clustering to prevent stats bleeding on narrow mobile viewports */
+    /* Balanced 2x2 cluster column formation for counter units on small screens */
     .stats-bar-grid {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 2rem 1rem !important;
@@ -39,7 +46,7 @@
 
     .hero-graphic {
         text-align: center !important;
-        order: -1 !important; /* Forces hero graphics above typography header blocks */
+        order: -1 !important; /* Forces hero mockup images above layout headline fonts */
         width: 100% !important;
     }
 
@@ -60,9 +67,17 @@
         text-align: center !important;
     }
     
-    /* Responsive Off-Canvas Navigation Drawer Toggle System[span_3](start_span)[span_3](end_span) */
+    /* Off-Canvas Navigation Drawer Toggle Overlay */
     .nav-toggle {
         display: flex !important;
+    }
+
+    .nav-toggle span {
+        background-color: #ffffff !important; /* Keeps toggle visible over dark header */
+    }
+
+    .header-nav.scrolled .nav-toggle span {
+        background-color: var(--secondary) !important; /* Swaps toggle color on scroll activation */
     }
 
     .nav-menu {
@@ -80,6 +95,12 @@
         box-shadow: var(--shadow-lg) !important;
     }
 
+    .nav-menu .nav-link {
+        color: var(--text-main) !important;
+        font-size: 1.2rem !important;
+        width: 100%;
+    }
+
     .nav-menu.mobile-open {
         left: 0 !important;
     }
@@ -91,7 +112,7 @@
     }
 }
 
-/* --- Micro Device Optimization (480px and below) --- */
+/* --- Micro Viewport Settings (480px and below) --- */
 @media screen and (max-width: 480px) {
     h1 { font-size: 1.85rem !important; }
     h2 { font-size: 1.5rem !important; }
@@ -101,6 +122,6 @@
     }
     
     .stats-bar-grid {
-        grid-template-columns: 1fr !important; /* Complete linear stack for small viewports */
+        grid-template-columns: 1fr !important; /* Clean vertical stack for compact mobile interfaces */
     }
 }
