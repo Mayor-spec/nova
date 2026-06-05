@@ -1,41 +1,45 @@
 /* ==========================================================================
-   NOVATECH SOLUTIONS - BULLETPROOF RESPONSIVE ENGINE
+   NOVATECH SOLUTIONS - RESPONSIVE LAYOUT ENGINE
+   Description: Overrides desktop grid metrics to enforce clean column stacking[span_1](start_span)[span_1](end_span).
    ========================================================================== */
 
+/* --- Tablet Adaptations (1024px and below) --- */
 @media screen and (max-width: 1024px) {
-    h1 { font-size: 2.5rem !important; }
-    h2 { font-size: 2rem !important; }
-    .hero-grid-layout { gap: 2rem !important; }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    .hero-grid-layout { gap: 2rem; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
 }
 
-/* Strict Mobile Breakthrough Viewport Stack (768px and below) */
+/* --- Strict Mobile Breakthrough Stack (768px and below) --- */
 @media screen and (max-width: 768px) {
     :root {
         --header-height: 70px;
     }
 
-    /* Force layouts to drop layout splitting and stack into a 1-column block */
+    .section-padding {
+        padding: 4rem 0;
+    }
+
+    /* Force layouts to collapse layout rows and snap to single vertical columns[span_2](start_span)[span_2](end_span) */
     .hero-grid-layout,
     .services-preview-grid,
-    .portfolio-grid,
-    .team-grid,
     .footer-grid {
         grid-template-columns: 1fr !important;
         gap: 2.5rem !important;
         width: 100% !important;
     }
 
-    /* Target the stats counter bar from your screenshot explicitly */
-    .stats-bar .container {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important; /* Forces a beautifully balanced 2x2 grid */
+    /* 2x2 counter clustering to prevent stats bleeding on narrow mobile viewports */
+    .stats-bar-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
         gap: 2rem 1rem !important;
         width: 100% !important;
     }
 
     .hero-graphic {
         text-align: center !important;
-        order: -1 !important; /* Shifts image above text header on mobile */
+        order: -1 !important; /* Forces hero graphics above typography header blocks */
         width: 100% !important;
     }
 
@@ -46,7 +50,6 @@
     }
 
     .hero-actions {
-        display: flex !important;
         flex-direction: column !important;
         gap: 1rem !important;
         width: 100% !important;
@@ -55,10 +58,9 @@
     .hero-actions .btn {
         width: 100% !important;
         text-align: center !important;
-        box-sizing: border-box !important;
     }
     
-    /* Mobile Navigation Drawer System Fixes */
+    /* Responsive Off-Canvas Navigation Drawer Toggle System[span_3](start_span)[span_3](end_span) */
     .nav-toggle {
         display: flex !important;
     }
@@ -75,19 +77,30 @@
         padding: 3rem 2rem !important;
         gap: 2rem !important;
         transition: all 0.3s ease-in-out !important;
-        box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1) !important;
+        box-shadow: var(--shadow-lg) !important;
     }
 
     .nav-menu.mobile-open {
         left: 0 !important;
     }
+
+    .footer-bottom {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 1.5rem !important;
+    }
 }
 
+/* --- Micro Device Optimization (480px and below) --- */
 @media screen and (max-width: 480px) {
     h1 { font-size: 1.85rem !important; }
     h2 { font-size: 1.5rem !important; }
     
-    .stats-bar .container {
-        grid-template-columns: 1fr !important; /* Single column stack for small phones */
+    .container {
+        padding: 0 1.25rem !important;
+    }
+    
+    .stats-bar-grid {
+        grid-template-columns: 1fr !important; /* Complete linear stack for small viewports */
     }
 }
