@@ -1,6 +1,6 @@
 /* ==========================================================================
-   NOVATECH SOLUTIONS - GLOBAL STYLESHEET
-   Description: Premium SaaS-style corporate design tokens, variables, & resets.
+   NOVATECH SOLUTIONS - MASTER UNIFIED STYLESHEET
+   Description: Core Tokens, Typography Hierarchy, Components, & Layout Controls.
    ========================================================================== */
 
 /* --- Google Fonts Import --- */
@@ -8,7 +8,6 @@
 
 /* --- Design Tokens & Variables --- */
 :root {
-    /* Color Palette */
     --primary: #2563EB;
     --primary-hover: #1D4ED8;
     --secondary: #1E293B;
@@ -19,22 +18,11 @@
     --text-muted: #475569;
     --border: #E2E8F0;
     
-    /* Semantic Colors */
-    --success: #10B981;
-    --error: #EF4444;
-    --warning: #F59E0B;
-    
-    /* Typography Overrides */
-    --font-heading: 'Poppins', sans-serif;
-    --font-body: 'Inter', sans-serif;
-    
-    /* Transitions & Shadows */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.1), 0 2px 4px -1px rgba(15, 23, 42, 0.06);
     --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -2px rgba(15, 23, 42, 0.05);
     
-    /* Global Sizing Structure */
     --header-height: 80px;
     --max-width: 1280px;
 }
@@ -52,7 +40,7 @@ html {
 }
 
 body {
-    font-family: var(--font-body);
+    font-family: 'Inter', sans-serif;
     background-color: var(--background);
     color: var(--text-main);
     line-height: 1.6;
@@ -61,14 +49,14 @@ body {
 
 /* --- Typography Hierarchy --- */
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     color: var(--secondary);
     line-height: 1.25;
 }
 
 h1 { font-size: 3rem; letter-spacing: -0.025em; }
-h2 { font-size: 2.25rem; letter-spacing: -0.02em; position: relative; margin-bottom: 1.5rem; }
+h2 { font-size: 2.25rem; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
 h3 { font-size: 1.5rem; }
 p { margin-bottom: 1rem; color: var(--text-muted); }
 
@@ -80,7 +68,6 @@ a {
 
 button, input, textarea, select {
     font-family: inherit;
-    font-size: inherit;
     outline: none;
 }
 
@@ -149,6 +136,22 @@ img {
     transform: translateY(-2px);
 }
 
+.btn-hero-secondary {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.btn-accent-cta {
+    background-color: var(--accent);
+    color: var(--surface);
+}
+
+.btn-accent-cta:hover {
+    background-color: #0891b2;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
 /* --- Sticky Global Navigation --- */
 .header-nav {
     height: var(--header-height);
@@ -179,13 +182,10 @@ img {
 }
 
 .logo-brand {
-    font-family: var(--font-heading);
+    font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
     font-weight: 800;
     color: var(--secondary);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
 }
 
 .logo-brand span {
@@ -211,21 +211,6 @@ img {
     color: var(--primary);
 }
 
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--primary);
-    transition: var(--transition-smooth);
-}
-
-.nav-link:hover::after, .nav-link.active::after {
-    width: 100%;
-}
-
 .nav-toggle {
     display: none;
     background: none;
@@ -244,24 +229,95 @@ img {
     transition: var(--transition-smooth);
 }
 
-/* --- Immersive Page Hero System --- */
-.inner-hero {
-    background: linear-gradient(135deg, var(--secondary) 0%, #0F172A 100%);
-    padding: calc(var(--header-height) + 5rem) 0 5rem 0;
-    color: var(--surface);
+/* --- Structural Section Blocks (Desktop Grid Modes) --- */
+.hero-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-graphic {
+    text-align: right;
+}
+
+.hero-graphic img {
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+}
+
+.stats-bar {
+    background-color: var(--surface);
+    padding: 3.5rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.stats-bar-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    gap: 2rem;
+}
+
+.counter-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.stat-node p {
+    margin: 0;
+    font-weight: 500;
+}
+
+.services-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.competency-card {
+    background: var(--surface);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+}
+
+.competency-card i {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.icon-primary { color: var(--primary); }
+.icon-accent { color: var(--accent); }
+.icon-secondary { color: var(--secondary); }
+
+.services-preview-action {
+    text-align: center;
+    margin-top: 3.5rem;
+}
+
+.cta-banner {
+    background: var(--secondary);
+    color: #ffffff;
+    padding: 5rem 0;
     text-align: center;
 }
 
-.inner-hero h1 {
-    color: var(--surface);
+.cta-banner h2 {
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
-.inner-hero p {
+.cta-banner p {
     color: #94A3B8;
-    font-size: 1.125rem;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 2.5rem auto;
 }
 
 /* --- Global Modern Footer --- */
@@ -337,7 +393,7 @@ img {
     font-size: 0.875rem;
 }
 
-/* --- Functional Utilities --- */
+/* --- Utilities & Dynamic Components --- */
 .back-to-top {
     position: fixed;
     bottom: 2rem;
@@ -359,17 +415,8 @@ img {
     border: none;
 }
 
-.back-to-top.visible {
-    opacity: 1;
-    visibility: visible;
-}
+.back-to-top.visible { opacity: 1; visibility: visible; }
 
-.back-to-top:hover {
-    background-color: var(--primary-hover);
-    transform: translateY(-3px);
-}
-
-/* Page Loader Overlay */
 .page-loader {
     position: fixed;
     top: 0;
@@ -398,28 +445,106 @@ img {
     100% { transform: rotate(360deg); }
 }
 
-/* Scroll Animation Hooks */
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+/* ==========================================================================
+   HEAVY-DUTY RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+
+@media screen and (max-width: 1024px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    .hero-grid-layout { gap: 2rem; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
 }
 
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
+/* Strict Mobile Breakthrough Viewport Stack (768px and below) */
+@media screen and (max-width: 768px) {
+    :root {
+        --header-height: 70px;
+    }
+
+    .section-padding {
+        padding: 4rem 0;
+    }
+
+    /* Force all grids to instantly collapse layout splits and vertical stack */
+    .hero-grid-layout,
+    .services-preview-grid,
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+        width: 100% !important;
+    }
+
+    /* Beautiful 2x2 cluster layout for counters on phones to prevent clipping */
+    .stats-bar-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2rem 1rem !important;
+        width: 100% !important;
+    }
+
+    .hero-graphic {
+        text-align: center !important;
+        order: -1 !important; /* Forces hero image above context headers */
+        width: 100% !important;
+    }
+
+    .hero-graphic img {
+        max-width: 100% !important;
+        height: auto !important;
+        margin: 0 auto !important;
+    }
+
+    .hero-actions {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        width: 100% !important;
+    }
+
+    .hero-actions .btn {
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    /* Navigation Menu Toggle System */
+    .nav-toggle {
+        display: flex !important;
+    }
+
+    .nav-menu {
+        position: fixed !important;
+        top: var(--header-height) !important;
+        left: -100% !important;
+        width: 100% !important;
+        height: calc(100vh - var(--header-height)) !important;
+        background-color: #ffffff !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 3rem 2rem !important;
+        gap: 2rem !important;
+        transition: all 0.3s ease-in-out !important;
+        box-shadow: var(--shadow-lg) !important;
+    }
+
+    .nav-menu.mobile-open {
+        left: 0 !important;
+    }
+
+    .footer-bottom {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 1.5rem !important;
+    }
 }
 
-/* --- High-Specificity Grid Fallbacks --- */
-.hero-grid-layout {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
-    align-items: center;
-}
-
-.services-preview-grid {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+@media screen and (max-width: 480px) {
+    h1 { font-size: 1.85rem !important; }
+    h2 { font-size: 1.5rem !important; }
+    
+    .container {
+        padding: 0 1.25rem !important;
+    }
+    
+    .stats-bar-grid {
+        grid-template-columns: 1fr !important; /* Stack stats one after another on narrow phones */
+    }
 }
