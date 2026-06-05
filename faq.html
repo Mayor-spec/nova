@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Systems Knowledge Base & FAQs | NovaTech Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <style>
-        .faq-group { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.25rem; }
+        .faq-group { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.25rem; width: 100%; }
         .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; transition: var(--transition-smooth); }
         .faq-item.active { border-color: var(--primary); box-shadow: var(--shadow-sm); }
-        .faq-item-trigger { width: 100%; padding: 1.5rem; background: none; border: none; text-align: left; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+        .faq-item-trigger { width: 100%; padding: 1.5rem; background: none; border: none; text-align: left; display: flex; justify-content: space-between; align-items: center; cursor: pointer; gap: 1rem; }
         .faq-item-trigger h3 { font-size: 1.1rem; color: var(--secondary); margin: 0; }
-        .faq-icon { transition: transform 0.3s ease; color: var(--text-muted); }
+        .faq-icon { transition: transform 0.3s ease; color: var(--text-muted); flex-shrink: 0; }
         .faq-item.active .faq-icon { transform: rotate(180deg); color: var(--primary); }
         .faq-item-content { max-height: 0; overflow: hidden; transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
         .faq-inner-text { padding: 0 1.5rem 1.5rem 1.5rem; color: var(--text-muted); font-size: 0.95rem; border-top: 1px solid transparent; }
@@ -43,19 +43,17 @@
         </div>
     </header>
 
-    <section class="inner-hero">
+    <section class="inner-hero" style="background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); padding: calc(var(--header-height) + 4rem) 0 5rem 0; color: #fff; text-align: center;">
         <div class="container">
             <h1>Architecture Knowledge Base</h1>
             <p>Comprehensive technical solutions addressing systems deployment parameters and corporate execution guidelines.</p>
         </div>
     </section>
 
-    <!-- Comprehensive 15-FAQ Accordion Engine -->
     <section class="section-padding">
         <div class="container">
             <div class="faq-group">
                 
-                <!-- FAQ 1 -->
                 <div class="faq-item">
                     <button class="faq-item-trigger">
                         <h3>What core software architecture patterns do you prioritize?</h3>
@@ -68,7 +66,6 @@
                     </div>
                 </div>
 
-                <!-- FAQ 2 -->
                 <div class="faq-item">
                     <button class="faq-item-trigger">
                         <h3>How does NovaTech maintain platform isolation during cloud deployments?</h3>
@@ -81,7 +78,6 @@
                     </div>
                 </div>
 
-                <!-- FAQ 3 -->
                 <div class="faq-item">
                     <button class="faq-item-trigger">
                         <h3>Can you integrate custom AI predictive systems into legacy databases?</h3>
@@ -90,162 +86,6 @@
                     <div class="faq-item-content">
                         <div class="faq-inner-text">
                             Yes. We develop custom inference adapters that sit directly beside existing databases, pulling target event frames through asynchronous pipelines without degrading legacy operational read performance.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 4 -->
-                <div class="faq-item">
-                    <button class="faq-item-trigger">
-                        <h3>What measures are taken to guarantee end-to-end data security?</h3>
-                        <i class="fa-solid fa-chevron-down faq-icon"></i>
-                    </button>
-                    <div class="faq-item-content">
-                        <div class="faq-inner-text">
-                            All network connections pass through mutual transport-layer cryptography protocols. System data components use military-grade encryption algorithms both while resting in physical storage and moving through processing paths.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 5 -->
-                <div class="faq-item">
-                    <button class="faq-item-trigger">
-                        <h3>Do you build cross-platform mobile apps using standard native engines?</h3>
-                        <i class="fa-solid fa-chevron-down faq-icon"></i>
-                    </button>
-                    <div class="faq-item-content">
-                        <div class="faq-inner-text">
-                            We implement optimized cross-compilation layers that translate cleanly to native instructions, ensuring high UI rendering performance while keeping the core codebase unified.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 6 -->
-                <div class="faq-item">
-                    <button class="faq-item-trigger">
-                        <h3>What is the typical time frame for an enterprise architectural discovery phase?</h3>
-                        <i class="fa-solid fa-chevron-down faq-icon"></i>
-                    </button>
-                    <div class="faq-item-content">
-                        <div class="faq-inner-text">
-                            A discovery run takes 2 to 4 weeks, during which our senior engineers audit your data access trees, network load history, and schema models to map out precise target metrics.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 7 -->
-                <div class="faq-item">
-                    <button class="faq-item-trigger">
-                        <h3>How do you manage zero-downtime database structural migrations?</h3>
-                        <i class="fa-solid fa-chevron-down faq-icon"></i>
-                    </button>
-                    <div class="faq-item-content">
-                        <div class="faq-inner-text">
-                            We execute a dual-write pipeline phase, allowing application versions to handle new database tables alongside the old schemas until parity validations confirm it is safe to decouple the legacy target.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 8 -->
-                <div class="faq-item">
-                    <button class="faq-item-trigger">
-                        <h3>What tools do you use to manage infrastructure-as-code deployments?</h3>
-                        <i class="fa-solid fa-chevron-down faq-icon"></i>
-                    </button>
-                    <div class="faq-item-content">
-                        <div class="faq-inner-text">
-                            We use industry-standard declarative automation engines to define computing groups, firewall boundaries, and network pipelines inside source control repos for reliable environmental scaling.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 9 -->
-                <div class="faq-item">
-                    <button class="faq-item-trigger">
-                        <h3>Do you provide ongoing operational platform monitoring services?</h3>
-                        <i class="fa-solid fa-chevron-down faq-icon"></i>
-                    </button>
-                    <div class="faq-item-content">
-                        <div class="faq-inner-text">
-                            Yes. We deploy automated error trackers and alerting hooks that alert our engineering response nodes the moment operational parameters fall outside targeted tolerances.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 10 -->
-                <div class="faq-item">
-                    <button class="faq-item-trigger">
-                        <h3>Are your software engineering solutions compliant with regional privacy mandates?</h3>
-                        <i class="fa-solid fa-chevron-down faq-icon"></i>
-                    </button>
-                    <div class="faq-item-content">
-                        <div class="faq-inner-text">
-                            Every single database model, user authorization node, and tracking logic stack is structured to enforce data minimisation, anonymization, and immediate consumer deletion routines.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 11 -->
-                <div class="faq-item">
-                    <button class="faq-item-trigger">
-                        <h3>How do you prevent UI layout degradation on high-density displays?</h3>
-                        <i class="fa-solid fa-chevron-down faq-icon"></i>
-                    </button>
-                    <div class="faq-item-content">
-                        <div class="faq-inner-text">
-                            We avoid brittle dimensional declarations, relying instead on clean relative scaling systems and responsive styling rules that match specific hardware display capabilities precisely.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 12 -->
-                <div class="faq-item">
-                    <button class="faq-item-trigger">
-                        <h3>What backup mechanisms do you use for globally distributed systems?</h3>
-                        <i class="fa-solid fa-chevron-down faq-icon"></i>
-                    </button>
-                    <div class="faq-item-content">
-                        <div class="faq-inner-text">
-                            We maintain point-in-time incremental database state copies across distinct geographical cloud regions to guarantee immediate fallback execution paths in natural disaster scenarios.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 13 -->
-                <div class="faq-item">
-                    <button class="faq-item-trigger">
-                        <h3>Can NovaTech Solutions decouple dependency ties to heavy frameworks?</h3>
-                        <i class="fa-solid fa-chevron-down faq-icon"></i>
-                    </button>
-                    <div class="faq-item-content">
-                        <div class="faq-inner-text">
-                            Yes. We rewrite cluttered platform abstractions into highly lean native logic steps, reducing performance overheads and eliminating ongoing security patching bottlenecks.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 14 -->
-                <div class="faq-item">
-                    <button class="faq-item-trigger">
-                        <h3>How do your technical consulting agreements operate billing allocations?</h3>
-                        <i class="fa-solid fa-chevron-down faq-icon"></i>
-                    </button>
-                    <div class="faq-item-content">
-                        <div class="faq-inner-text">
-                            We work via structured sprint milestones or fixed monthly retainers linked directly to verified architecture delivery blocks, providing full budget accountability.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 15 -->
-                <div class="faq-item">
-                    <button class="faq-item-trigger">
-                        <h3>How do we initiate a technical engagement protocol with NovaTech?</h3>
-                        <i class="fa-solid fa-chevron-down faq-icon"></i>
-                    </button>
-                    <div class="faq-item-content">
-                        <div class="faq-inner-text">
-                            Simply submit your operational needs through our interface portal. A senior systems architect will establish a diagnostic session over a direct corporate voice link within one business day.
                         </div>
                     </div>
                 </div>
