@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Technical Blog & Architectural Insights | NovaTech Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -31,21 +31,19 @@
         </div>
     </header>
 
-    <section class="inner-hero">
+    <section class="inner-hero" style="background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); padding: calc(var(--header-height) + 4rem) 0 5rem 0; color: #fff; text-align: center;">
         <div class="container">
             <h1>The Architectural Thought Terminal</h1>
             <p>In-depth technical papers covering system security optimizations, clean software architectures, and automated infrastructure deployments.</p>
         </div>
     </section>
 
-    <!-- Deep Technical Content Blog Grid -->
     <section class="section-padding">
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem;">
+            <div class="portfolio-grid" style="gap: 2.5rem;">
                 
-                <!-- Article 1 -->
                 <article style="background: var(--surface); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
-                    <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=400&q=80" alt="Data Security Topology Map">
+                    <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=400&q=80" alt="Data Security Topology Map" style="width: 100%;">
                     <div style="padding: 2rem; flex-grow: 1;">
                         <span style="font-size: 0.8rem; font-weight: 600; color: var(--accent); text-transform: uppercase;">Cyber Security</span>
                         <h3 style="margin: 0.5rem 0 1rem 0; font-size: 1.35rem; line-height: 1.3;">Structuring Zero-Trust Edge Gateway Systems</h3>
@@ -57,9 +55,8 @@
                     </div>
                 </article>
 
-                <!-- Article 2 -->
                 <article style="background: var(--surface); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
-                    <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=400&q=80" alt="Database Balancing Node Design">
+                    <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=400&q=80" alt="Database Balancing Node Design" style="width: 100%;">
                     <div style="padding: 2rem; flex-grow: 1;">
                         <span style="font-size: 0.8rem; font-weight: 600; color: var(--primary); text-transform: uppercase;">Database Scaling</span>
                         <h3 style="margin: 0.5rem 0 1rem 0; font-size: 1.35rem; line-height: 1.3;">Eliminating Connection Lag in Scaled Backend Loops</h3>
@@ -71,9 +68,8 @@
                     </div>
                 </article>
 
-                <!-- Article 3 -->
                 <article style="background: var(--surface); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
-                    <img src="https://images.unsplash.com/photo-1618401471353-b98aedd07871?auto=format&fit=crop&w=400&q=80" alt="Clean Code Development Engine">
+                    <img src="https://images.unsplash.com/photo-1618401471353-b98aedd07871?auto=format&fit=crop&w=400&q=80" alt="Clean Code Development Engine" style="width: 100%;">
                     <div style="padding: 2rem; flex-grow: 1;">
                         <span style="font-size: 0.8rem; font-weight: 600; color: var(--secondary); text-transform: uppercase;">Software Design</span>
                         <h3 style="margin: 0.5rem 0 1rem 0; font-size: 1.35rem; line-height: 1.3;">Decoupling Clean Code Paths from Fragile Framework Systems</h3>
