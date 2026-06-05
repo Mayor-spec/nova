@@ -1,0 +1,95 @@
+/* ==========================================================================
+   NOVATECH SOLUTIONS - RESPONSIVE LAYOUT ENGINE
+   Description: Responsive breaklines handling layout transformations cleanly.
+   ========================================================================== */
+
+/* --- Tablet Structural Adaptation (1024px and below) --- */
+@media (max-width: 1024px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+}
+
+/* --- Mobile Interactivity Override (768px and below) --- */
+@media (max-width: 768px) {
+    :root {
+        --header-height: 70px;
+    }
+
+    .section-padding {
+        padding: 4.5rem 0;
+    }
+
+    /* Mobile Drawer Menu Transformation */
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: var(--header-height);
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - var(--header-height));
+        background-color: var(--surface);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 3rem 2rem;
+        gap: 2rem;
+        transition: var(--transition-smooth);
+        box-shadow: var(--shadow-lg);
+        overflow-y: auto;
+    }
+
+    .nav-menu.mobile-open {
+        left: 0;
+    }
+
+    .nav-link {
+        font-size: 1.25rem;
+        width: 100%;
+    }
+
+    /* Toggle Icon State Transformation */
+    .nav-toggle.open span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .nav-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+}
+
+/* --- Small Device Adaptation (480px and below) --- */
+@media (max-width: 480px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

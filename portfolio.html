@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Portfolios & Case Studies | NovaTech Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <div id="page-loader" class="page-loader"><div class="spinner"></div></div>
+
+    <header class="header-nav">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-brand">NovaTech<span>Solutions</span></a>
+            <button class="nav-toggle" aria-label="Toggle Navigation"><span></span><span></span><span></span></button>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                    <li><a href="team.html" class="nav-link">Team</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="careers.html" class="nav-link">Careers</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="inner-hero">
+        <div class="container">
+            <h1>Verified Corporate Case Studies</h1>
+            <p>Production environments engineered to deliver tangible, high-throughput business metrics.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            
+            <div class="filter-controls" style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 4rem;">
+                <button class="btn filter-btn active" data-filter="all">All Ecosystems</button>
+                <button class="btn filter-btn" data-filter="software">Core Software</button>
+                <button class="btn filter-btn" data-filter="cloud">Cloud Infra</button>
+                <button class="btn filter-btn" data-filter="cyber">Security Nodes</button>
+            </div>
+
+            <div class="portfolio-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem;">
+                
+                <div class="portfolio-card" data-category="software" style="background: var(--surface); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-smooth);">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80" alt="Apex Core Settlement Infrastructure">
+                    <div style="padding: 2rem;">
+                        <span style="color: var(--primary); font-weight: 600; font-size: 0.85rem; text-transform: uppercase;">Core Software</span>
+                        <h3 style="margin: 0.5rem 0 1rem 0;">Apex Banking Core Engine</h3>
+                        <p style="font-size: 0.9rem;">Engineered a transactional database loop capable of running high-volume transfers concurrently without race condition lockouts.</p>
+                        <p style="font-size: 0.85rem; font-weight: 500; color: var(--secondary);">Metrics: 14ms average processing lag latency mitigation.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" data-category="cloud" style="background: var(--surface); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-smooth);">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80" alt="Stratus Retail High Scale Grid">
+                    <div style="padding: 2rem;">
+                        <span style="color: var(--accent); font-weight: 600; font-size: 0.85rem; text-transform: uppercase;">Cloud Infra</span>
+                        <h3 style="margin: 0.5rem 0 1rem 0;">Stratus E-Commerce Migration</h3>
+                        <p style="font-size: 0.9rem;">Migrated a high-traffic marketplace system into isolated, auto-scaling multi-region cloud clusters.</p>
+                        <p style="font-size: 0.85rem; font-weight: 500; color: var(--secondary);">Metrics: Achieved 99.99% operational runtime stability.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" data-category="cyber" style="background: var(--surface); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-smooth);">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=400&q=80" alt="Aegis Defense Zero Trust Layer">
+                    <div style="padding: 2rem;">
+                        <span style="color: var(--secondary); font-weight: 600; font-size: 0.85rem; text-transform: uppercase;">Security Nodes</span>
+                        <h3 style="margin: 0.5rem 0 1rem 0;">Aegis Logistics Shield</h3>
+                        <p style="font-size: 0.9rem;">Implemented unified authorization gateways and mutual transport-layer security protocols across internal APIs.</p>
+                        <p style="font-size: 0.85rem; font-weight: 500; color: var(--secondary);">Metrics: Neutralized daily unauthorized execution attempts.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" data-category="software" style="background: var(--surface); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-smooth);">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80" alt="Data Engine Node">
+                    <div style="padding: 2rem;">
+                        <span style="color: var(--primary); font-weight: 600; font-size: 0.85rem; text-transform: uppercase;">Core Software</span>
+                        <h3 style="margin: 0.5rem 0 1rem 0;">Vanguard ERP Portal</h3>
+                        <p style="font-size: 0.9rem;">Rebuilt a global inventory orchestration database utilizing automated background sync processes.</p>
+                        <p style="font-size: 0.85rem; font-weight: 500; color: var(--secondary);">Metrics: 40% efficiency boost in global tracking speed.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-main">
+        <div class="container footer-grid">
+            <div class="footer-brand-info">
+                <h3>NovaTech Solutions</h3>
+                <p>Transforming Ideas Into Digital Excellence through professional-grade architectural consulting and systems design.</p>
+                <div class="footer-socials">
+                    <a href="https://linkedin.com/in/babatunde-moses-386583355" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Mayor-spec" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://x.com/mayowa_tech" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links-col">
+                <h4>Engine Nodes</h4>
+                <ul>
+                    <li><a href="services.html">Software Engineering</a></li>
+                    <li><a href="services.html">Cloud Computing</a></li>
+                    <li><a href="services.html">Cyber Security</a></li>
+                    <li><a href="services.html">AI Automation</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-col">
+                <h4>Company Matrix</h4>
+                <ul>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="portfolio.html">Case Studies</a></li>
+                    <li><a href="careers.html">Career Pipeline</a></li>
+                    <li><a href="blog.html">Technical Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-col">
+                <h4>Support Center</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Hub</a></li>
+                    <li><a href="faq.html">System FAQs</a></li>
+                    <li><a href="privacy.html">Privacy Declaration</a></li>
+                    <li><a href="terms.html">Usage Terms</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 NovaTech Solutions. Built by Babatunde Moses. All Rights Reserved.</p>
+            <p>HQ Terminal: New College Hostel, UNILORIN, Kwara State, Nigeria.</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="js/script.js"></script>
+</body>
+</html>

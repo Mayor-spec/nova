@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systems Knowledge Base & FAQs | NovaTech Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .faq-group { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.25rem; }
+        .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; transition: var(--transition-smooth); }
+        .faq-item.active { border-color: var(--primary); box-shadow: var(--shadow-sm); }
+        .faq-item-trigger { width: 100%; padding: 1.5rem; background: none; border: none; text-align: left; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+        .faq-item-trigger h3 { font-size: 1.1rem; color: var(--secondary); margin: 0; }
+        .faq-icon { transition: transform 0.3s ease; color: var(--text-muted); }
+        .faq-item.active .faq-icon { transform: rotate(180deg); color: var(--primary); }
+        .faq-item-content { max-height: 0; overflow: hidden; transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .faq-inner-text { padding: 0 1.5rem 1.5rem 1.5rem; color: var(--text-muted); font-size: 0.95rem; border-top: 1px solid transparent; }
+        .faq-item.active .faq-inner-text { border-top-color: var(--border); }
+    </style>
+</head>
+<body>
+
+    <div id="page-loader" class="page-loader"><div class="spinner"></div></div>
+
+    <header class="header-nav">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-brand">NovaTech<span>Solutions</span></a>
+            <button class="nav-toggle" aria-label="Toggle Navigation"><span></span><span></span><span></span></button>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="team.html" class="nav-link">Team</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="careers.html" class="nav-link">Careers</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="inner-hero">
+        <div class="container">
+            <h1>Architecture Knowledge Base</h1>
+            <p>Comprehensive technical solutions addressing systems deployment parameters and corporate execution guidelines.</p>
+        </div>
+    </section>
+
+    <!-- Comprehensive 15-FAQ Accordion Engine -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="faq-group">
+                
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <button class="faq-item-trigger">
+                        <h3>What core software architecture patterns do you prioritize?</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-item-content">
+                        <div class="faq-inner-text">
+                            We design decoupled microservices utilizing clean programming boundaries, command-query responsibility segregation, and high-performance message routing streams to ensure resilience under high traffic loads.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <button class="faq-item-trigger">
+                        <h3>How does NovaTech maintain platform isolation during cloud deployments?</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-item-content">
+                        <div class="faq-inner-text">
+                            We enforce strict containerization patterns, isolated sub-networks, and declarative identity management scripts that restrict data-plane access exclusively to validated processing pipelines.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <button class="faq-item-trigger">
+                        <h3>Can you integrate custom AI predictive systems into legacy databases?</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-item-content">
+                        <div class="faq-inner-text">
+                            Yes. We develop custom inference adapters that sit directly beside existing databases, pulling target event frames through asynchronous pipelines without degrading legacy operational read performance.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <button class="faq-item-trigger">
+                        <h3>What measures are taken to guarantee end-to-end data security?</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-item-content">
+                        <div class="faq-inner-text">
+                            All network connections pass through mutual transport-layer cryptography protocols. System data components use military-grade encryption algorithms both while resting in physical storage and moving through processing paths.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <button class="faq-item-trigger">
+                        <h3>Do you build cross-platform mobile apps using standard native engines?</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-item-content">
+                        <div class="faq-inner-text">
+                            We implement optimized cross-compilation layers that translate cleanly to native instructions, ensuring high UI rendering performance while keeping the core codebase unified.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <button class="faq-item-trigger">
+                        <h3>What is the typical time frame for an enterprise architectural discovery phase?</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-item-content">
+                        <div class="faq-inner-text">
+                            A discovery run takes 2 to 4 weeks, during which our senior engineers audit your data access trees, network load history, and schema models to map out precise target metrics.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="faq-item">
+                    <button class="faq-item-trigger">
+                        <h3>How do you manage zero-downtime database structural migrations?</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-item-content">
+                        <div class="faq-inner-text">
+                            We execute a dual-write pipeline phase, allowing application versions to handle new database tables alongside the old schemas until parity validations confirm it is safe to decouple the legacy target.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 8 -->
+                <div class="faq-item">
+                    <button class="faq-item-trigger">
+                        <h3>What tools do you use to manage infrastructure-as-code deployments?</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-item-content">
+                        <div class="faq-inner-text">
+                            We use industry-standard declarative automation engines to define computing groups, firewall boundaries, and network pipelines inside source control repos for reliable environmental scaling.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 9 -->
+                <div class="faq-item">
+                    <button class="faq-item-trigger">
+                        <h3>Do you provide ongoing operational platform monitoring services?</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-item-content">
+                        <div class="faq-inner-text">
+                            Yes. We deploy automated error trackers and alerting hooks that alert our engineering response nodes the moment operational parameters fall outside targeted tolerances.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 10 -->
+                <div class="faq-item">
+                    <button class="faq-item-trigger">
+                        <h3>Are your software engineering solutions compliant with regional privacy mandates?</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-item-content">
+                        <div class="faq-inner-text">
+                            Every single database model, user authorization node, and tracking logic stack is structured to enforce data minimisation, anonymization, and immediate consumer deletion routines.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 11 -->
+                <div class="faq-item">
+                    <button class="faq-item-trigger">
+                        <h3>How do you prevent UI layout degradation on high-density displays?</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-item-content">
+                        <div class="faq-inner-text">
+                            We avoid brittle dimensional declarations, relying instead on clean relative scaling systems and responsive styling rules that match specific hardware display capabilities precisely.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 12 -->
+                <div class="faq-item">
+                    <button class="faq-item-trigger">
+                        <h3>What backup mechanisms do you use for globally distributed systems?</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-item-content">
+                        <div class="faq-inner-text">
+                            We maintain point-in-time incremental database state copies across distinct geographical cloud regions to guarantee immediate fallback execution paths in natural disaster scenarios.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 13 -->
+                <div class="faq-item">
+                    <button class="faq-item-trigger">
+                        <h3>Can NovaTech Solutions decouple dependency ties to heavy frameworks?</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-item-content">
+                        <div class="faq-inner-text">
+                            Yes. We rewrite cluttered platform abstractions into highly lean native logic steps, reducing performance overheads and eliminating ongoing security patching bottlenecks.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 14 -->
+                <div class="faq-item">
+                    <button class="faq-item-trigger">
+                        <h3>How do your technical consulting agreements operate billing allocations?</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-item-content">
+                        <div class="faq-inner-text">
+                            We work via structured sprint milestones or fixed monthly retainers linked directly to verified architecture delivery blocks, providing full budget accountability.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 15 -->
+                <div class="faq-item">
+                    <button class="faq-item-trigger">
+                        <h3>How do we initiate a technical engagement protocol with NovaTech?</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-item-content">
+                        <div class="faq-inner-text">
+                            Simply submit your operational needs through our interface portal. A senior systems architect will establish a diagnostic session over a direct corporate voice link within one business day.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-main">
+        <div class="container footer-grid">
+            <div class="footer-brand-info">
+                <h3>NovaTech Solutions</h3>
+                <p>Transforming Ideas Into Digital Excellence through professional-grade architectural consulting and systems design.</p>
+                <div class="footer-socials">
+                    <a href="https://linkedin.com/in/babatunde-moses-386583355" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Mayor-spec" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://x.com/mayowa_tech" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links-col">
+                <h4>Engine Nodes</h4>
+                <ul>
+                    <li><a href="services.html">Software Engineering</a></li>
+                    <li><a href="services.html">Cloud Computing</a></li>
+                    <li><a href="services.html">Cyber Security</a></li>
+                    <li><a href="services.html">AI Automation</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-col">
+                <h4>Company Matrix</h4>
+                <ul>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="portfolio.html">Case Studies</a></li>
+                    <li><a href="careers.html">Career Pipeline</a></li>
+                    <li><a href="blog.html">Technical Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-col">
+                <h4>Support Center</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Hub</a></li>
+                    <li><a href="faq.html">System FAQs</a></li>
+                    <li><a href="privacy.html">Privacy Declaration</a></li>
+                    <li><a href="terms.html">Usage Terms</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 NovaTech Solutions. Built by Babatunde Moses. All Rights Reserved.</p>
+            <p>HQ Terminal: New College Hostel, UNILORIN, Kwara State, Nigeria.</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="js/script.js"></script>
+</body>
+</html>

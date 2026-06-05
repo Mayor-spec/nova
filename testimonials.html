@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Validation & Testimonials | NovaTech Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .slider-wrapper { position: relative; max-width: 900px; margin: 0 auto; overflow: hidden; padding: 1rem; }
+        .slider-track { display: flex; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); width: 100%; }
+        .testimonial-slide { min-width: 100%; box-sizing: border-box; background: var(--surface); padding: 3.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); border: 1px solid var(--border); text-align: center; }
+        .rating-stars { color: #F59E0B; margin-bottom: 1.5rem; font-size: 1.25rem; }
+        .quote-text { font-size: 1.25rem; font-style: italic; color: var(--secondary); margin-bottom: 2rem; line-height: 1.8; }
+        .client-avatar { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin: 0 auto 1rem auto; border: 3px solid var(--primary); }
+        .client-meta h4 { margin: 0; font-size: 1.1rem; color: var(--secondary); }
+        .client-meta p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+        .slider-controls { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2.5rem; }
+        .slider-btn { width: 50px; height: 50px; background: var(--surface); border: 1px solid var(--border); border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--secondary); transition: var(--transition-smooth); }
+        .slider-btn:hover { background: var(--primary); color: var(--surface); border-color: var(--primary); transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+    <div id="page-loader" class="page-loader"><div class="spinner"></div></div>
+
+    <header class="header-nav">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-brand">NovaTech<span>Solutions</span></a>
+            <button class="nav-toggle" aria-label="Toggle Navigation"><span></span><span></span><span></span></button>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="team.html" class="nav-link">Team</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="careers.html" class="nav-link">Careers</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="inner-hero">
+        <div class="container">
+            <h1>Enterprise Quality Validation</h1>
+            <p>Verified structural outcomes from technology leaders who migrated legacy assets onto our clean architecture baselines.</p>
+        </div>
+    </section>
+
+    <!-- Vanilla Javascript Powered Carousel Engine -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="slider-wrapper">
+                <div class="slider-track">
+                    
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide">
+                        <div class="rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="quote-text">"NovaTech Solutions rebuilt our payment pipeline nodes from scratch. The total transactional processing lag was reduced significantly within the initial deployment cycle."</p>
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&h=100&q=80" alt="David Vance avatar" class="client-avatar">
+                        <div class="client-meta">
+                            <h4>David Vance</h4>
+                            <p>VP of Architecture, Apex Global Financials</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide">
+                        <div class="rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="quote-text">"The cloud isolation setup designed by their engineering team successfully handled our scaling peak demands with absolute performance consistency."</p>
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=100&h=100&q=80" alt="Sarah Jenkins avatar" class="client-avatar">
+                        <div class="client-meta">
+                            <h4>Sarah Jenkins</h4>
+                            <p>Chief Infrastructure Officer, Stratus Logistics Market</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="testimonial-slide">
+                        <div class="rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="quote-text">"Their zero-trust perimeter integrations completely eliminated unauthorized network traversal vulnerabilities across our enterprise application API endpoints."</p>
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80" alt="Amir Al-Soud avatar" class="client-avatar">
+                        <div class="client-meta">
+                            <h4>Amir Al-Soud</h4>
+                            <p>Director of Information Security, Aegis Health Grid</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Structural Navigation Paddles -->
+                <div class="slider-controls">
+                    <button class="slider-btn prev" aria-label="Previous Slide"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="slider-btn next" aria-label="Next Slide"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-main">
+        <div class="container footer-grid">
+            <div class="footer-brand-info">
+                <h3>NovaTech Solutions</h3>
+                <p>Transforming Ideas Into Digital Excellence through professional-grade architectural consulting and systems design.</p>
+                <div class="footer-socials">
+                    <a href="https://linkedin.com/in/babatunde-moses-386583355" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Mayor-spec" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://x.com/mayowa_tech" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links-col">
+                <h4>Engine Nodes</h4>
+                <ul>
+                    <li><a href="services.html">Software Engineering</a></li>
+                    <li><a href="services.html">Cloud Computing</a></li>
+                    <li><a href="services.html">Cyber Security</a></li>
+                    <li><a href="services.html">AI Automation</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-col">
+                <h4>Company Matrix</h4>
+                <ul>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="portfolio.html">Case Studies</a></li>
+                    <li><a href="careers.html">Career Pipeline</a></li>
+                    <li><a href="blog.html">Technical Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-col">
+                <h4>Support Center</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Hub</a></li>
+                    <li><a href="faq.html">System FAQs</a></li>
+                    <li><a href="privacy.html">Privacy Declaration</a></li>
+                    <li><a href="terms.html">Usage Terms</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 NovaTech Solutions. Built by Babatunde Moses. All Rights Reserved.</p>
+            <p>HQ Terminal: New College Hostel, UNILORIN, Kwara State, Nigeria.</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="js/script.js"></script>
+</body>
+</html>
