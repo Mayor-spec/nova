@@ -409,3 +409,17 @@ img {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* --- High-Specificity Grid Fallbacks --- */
+.hero-grid-layout {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    align-items: center;
+}
+
+.services-preview-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
