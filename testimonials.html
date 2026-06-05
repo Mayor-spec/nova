@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Enterprise Validation & Testimonials | NovaTech Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <style>
-        .slider-wrapper { position: relative; max-width: 900px; margin: 0 auto; overflow: hidden; padding: 1rem; }
+        .slider-wrapper { position: relative; max-width: 900px; margin: 0 auto; overflow: hidden; padding: 1rem; width: 100%; }
         .slider-track { display: flex; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); width: 100%; }
-        .testimonial-slide { min-width: 100%; box-sizing: border-box; background: var(--surface); padding: 3.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); border: 1px solid var(--border); text-align: center; }
+        .testimonial-slide { min-width: 100%; box-sizing: border-box; background: var(--surface); padding: 3.5rem 2rem; border-radius: 8px; box-shadow: var(--shadow-sm); border: 1px solid var(--border); text-align: center; }
         .rating-stars { color: #F59E0B; margin-bottom: 1.5rem; font-size: 1.25rem; }
         .quote-text { font-size: 1.25rem; font-style: italic; color: var(--secondary); margin-bottom: 2rem; line-height: 1.8; }
         .client-avatar { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin: 0 auto 1rem auto; border: 3px solid var(--primary); }
@@ -44,20 +44,18 @@
         </div>
     </header>
 
-    <section class="inner-hero">
+    <section class="inner-hero" style="background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); padding: calc(var(--header-height) + 4rem) 0 5rem 0; color: #fff; text-align: center;">
         <div class="container">
             <h1>Enterprise Quality Validation</h1>
             <p>Verified structural outcomes from technology leaders who migrated legacy assets onto our clean architecture baselines.</p>
         </div>
     </section>
 
-    <!-- Vanilla Javascript Powered Carousel Engine -->
     <section class="section-padding">
         <div class="container">
             <div class="slider-wrapper">
                 <div class="slider-track">
                     
-                    <!-- Slide 1 -->
                     <div class="testimonial-slide">
                         <div class="rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                         <p class="quote-text">"NovaTech Solutions rebuilt our payment pipeline nodes from scratch. The total transactional processing lag was reduced significantly within the initial deployment cycle."</p>
@@ -68,7 +66,6 @@
                         </div>
                     </div>
 
-                    <!-- Slide 2 -->
                     <div class="testimonial-slide">
                         <div class="rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                         <p class="quote-text">"The cloud isolation setup designed by their engineering team successfully handled our scaling peak demands with absolute performance consistency."</p>
@@ -79,20 +76,8 @@
                         </div>
                     </div>
 
-                    <!-- Slide 3 -->
-                    <div class="testimonial-slide">
-                        <div class="rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        <p class="quote-text">"Their zero-trust perimeter integrations completely eliminated unauthorized network traversal vulnerabilities across our enterprise application API endpoints."</p>
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80" alt="Amir Al-Soud avatar" class="client-avatar">
-                        <div class="client-meta">
-                            <h4>Amir Al-Soud</h4>
-                            <p>Director of Information Security, Aegis Health Grid</p>
-                        </div>
-                    </div>
-
                 </div>
 
-                <!-- Structural Navigation Paddles -->
                 <div class="slider-controls">
                     <button class="slider-btn prev" aria-label="Previous Slide"><i class="fa-solid fa-chevron-left"></i></button>
                     <button class="slider-btn next" aria-label="Next Slide"><i class="fa-solid fa-chevron-right"></i></button>
