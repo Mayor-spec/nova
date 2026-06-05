@@ -1,6 +1,6 @@
 /* ==========================================================================
-   NOVATECH SOLUTIONS - MASTER UNIFIED STYLESHEET
-   Description: Core Tokens, Typography Hierarchy, Components, & Layout Controls.
+   NOVATECH SOLUTIONS - DESKTOP LAYOUT ENGINE
+   Description: Core Design Tokens, Resets, Typography, & Base Grid Architectures.
    ========================================================================== */
 
 /* --- Google Fonts Import --- */
@@ -152,7 +152,7 @@ img {
     box-shadow: var(--shadow-md);
 }
 
-/* --- Sticky Global Navigation --- */
+/* --- Global Navigation Bar --- */
 .header-nav {
     height: var(--header-height);
     background-color: transparent;
@@ -229,7 +229,7 @@ img {
     transition: var(--transition-smooth);
 }
 
-/* --- Structural Section Blocks (Desktop Grid Modes) --- */
+/* --- Base Structural Components (Desktop Grid Profiles) --- */
 .hero-grid-layout {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -320,7 +320,7 @@ img {
     margin: 0 auto 2.5rem auto;
 }
 
-/* --- Global Modern Footer --- */
+/* --- Global Premium Footer --- */
 .footer-main {
     background-color: #0F172A;
     color: #94A3B8;
@@ -393,7 +393,7 @@ img {
     font-size: 0.875rem;
 }
 
-/* --- Utilities & Dynamic Components --- */
+/* --- Page Infrastructure Overlays --- */
 .back-to-top {
     position: fixed;
     bottom: 2rem;
@@ -443,108 +443,4 @@ img {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
-
-/* ==========================================================================
-   HEAVY-DUTY RESPONSIVE MEDIA QUERIES
-   ========================================================================== */
-
-@media screen and (max-width: 1024px) {
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2rem; }
-    .hero-grid-layout { gap: 2rem; }
-    .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
-}
-
-/* Strict Mobile Breakthrough Viewport Stack (768px and below) */
-@media screen and (max-width: 768px) {
-    :root {
-        --header-height: 70px;
-    }
-
-    .section-padding {
-        padding: 4rem 0;
-    }
-
-    /* Force all grids to instantly collapse layout splits and vertical stack */
-    .hero-grid-layout,
-    .services-preview-grid,
-    .footer-grid {
-        grid-template-columns: 1fr !important;
-        gap: 2.5rem !important;
-        width: 100% !important;
-    }
-
-    /* Beautiful 2x2 cluster layout for counters on phones to prevent clipping */
-    .stats-bar-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 2rem 1rem !important;
-        width: 100% !important;
-    }
-
-    .hero-graphic {
-        text-align: center !important;
-        order: -1 !important; /* Forces hero image above context headers */
-        width: 100% !important;
-    }
-
-    .hero-graphic img {
-        max-width: 100% !important;
-        height: auto !important;
-        margin: 0 auto !important;
-    }
-
-    .hero-actions {
-        flex-direction: column !important;
-        gap: 1rem !important;
-        width: 100% !important;
-    }
-
-    .hero-actions .btn {
-        width: 100% !important;
-        text-align: center !important;
-    }
-    
-    /* Navigation Menu Toggle System */
-    .nav-toggle {
-        display: flex !important;
-    }
-
-    .nav-menu {
-        position: fixed !important;
-        top: var(--header-height) !important;
-        left: -100% !important;
-        width: 100% !important;
-        height: calc(100vh - var(--header-height)) !important;
-        background-color: #ffffff !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        padding: 3rem 2rem !important;
-        gap: 2rem !important;
-        transition: all 0.3s ease-in-out !important;
-        box-shadow: var(--shadow-lg) !important;
-    }
-
-    .nav-menu.mobile-open {
-        left: 0 !important;
-    }
-
-    .footer-bottom {
-        flex-direction: column !important;
-        text-align: center !important;
-        gap: 1.5rem !important;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    h1 { font-size: 1.85rem !important; }
-    h2 { font-size: 1.5rem !important; }
-    
-    .container {
-        padding: 0 1.25rem !important;
-    }
-    
-    .stats-bar-grid {
-        grid-template-columns: 1fr !important; /* Stack stats one after another on narrow phones */
-    }
 }
