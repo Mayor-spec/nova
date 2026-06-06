@@ -1,6 +1,6 @@
 /* ==========================================================================
-   NOVATECH SOLUTIONS - MASTER CORE STYLESHEET
-   Description: Design Tokens, Global Resets, Component Elements, & Grid Layouts.
+   NOVATECH SOLUTIONS - MASTER DESKTOP ENGINE
+   Description: Global Tokens, Core Variable Sets, Components, & Layout Standards.
    ========================================================================== */
 
 /* --- Google Fonts Import --- */
@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 { font-size: 3rem; letter-spacing: -0.025em; }
-h2 { font-size: 2.25rem; letter-spacing: -0.02em; margin-bottom: 1.5rem; position: relative; }
+h2 { font-size: 2.25rem; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
 h3 { font-size: 1.5rem; }
 p { margin-bottom: 1rem; color: var(--text-muted); }
 
@@ -77,7 +77,7 @@ img {
     display: block;
 }
 
-/* --- Reusable Structural Containers --- */
+/* --- Reusable Structural Layout Containers --- */
 .container {
     width: 100%;
     max-width: var(--max-width);
@@ -100,7 +100,7 @@ img {
     color: var(--text-muted);
 }
 
-/* --- Interactive UI Buttons --- */
+/* --- Interactive UI Elements & Buttons --- */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -152,10 +152,10 @@ img {
     box-shadow: var(--shadow-md);
 }
 
-/* --- High-Contrast Sticky Global Header --- */
+/* --- Sticky Global Header --- */
 .header-nav {
     height: var(--header-height);
-    background-color: rgba(15, 23, 42, 0.95); /* Semi-solid background prevents desktop text blending */
+    background-color: rgba(15, 23, 42, 0.95); /* Prevents background content blending through */
     backdrop-filter: blur(8px);
     position: fixed;
     top: 0;
@@ -245,12 +245,16 @@ img {
     transition: var(--transition-smooth);
 }
 
-/* --- Section Content Structural Formats (Desktop View) --- */
+/* --- Block Level Structural Formats (Desktop Proportions) --- */
 .hero-home {
     background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
-    /* FIXED: Dynamic padding stops navbar content overlapping title blocks */
+    /* FIXED: Safety gap calculation blocks fixed nav overlays */
     padding: calc(var(--header-height) + 4rem) 0 7rem 0; 
     color: #ffffff;
+}
+
+.hero-home h1 {
+    color: #ffffff !important; /* Force true white high contrast structural layout visibility */
 }
 
 .hero-grid-layout {
@@ -422,7 +426,7 @@ img {
     font-size: 0.875rem;
 }
 
-/* --- Platform Loader & Global System Utilities --- */
+/* --- System Operations Overlays --- */
 .back-to-top {
     position: fixed;
     bottom: 2rem;
