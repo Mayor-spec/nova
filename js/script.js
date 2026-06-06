@@ -1,5 +1,5 @@
 /**
- * NOVATECH SOLUTIONS - UI ENGINE ARCHITECTURE
+ * NOVATECH SOLUTIONS - UI ENGINE ARCHITECTURE (FIXED)
  * Core Scripts for Interactions, Performance Management, and Global Functions.
  */
 
@@ -58,6 +58,8 @@ function initMobileMenu() {
 // 4. Scroll Reveal Engine using IntersectionObserver
 function initScrollAnimations() {
     const reveals = document.querySelectorAll('.reveal');
+    if (reveals.length === 0) return;
+
     const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
 
     const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -69,7 +71,8 @@ function initScrollAnimations() {
         });
     }, observerOptions);
 
-    revevals.forEach(element => revealObserver.observe(element));
+    // FIXED: Resolved runtime script crashing error loop by fixing 'revevals' reference typo
+    reveals.forEach(element => revealObserver.observe(element));
 }
 
 // 5. Back-to-Top Interaction Tracking
@@ -111,6 +114,9 @@ function initAnimatedCounters() {
                         counter.innerText = target;
                     }
                 };
+                
+                // Set counter metric to base zero on target intersection before starting animation loop
+                counter.innerText = "0";
                 updateCount();
                 observer.unobserve(counter);
             }
@@ -131,7 +137,8 @@ function initFaqAccordion() {
 
             document.querySelectorAll('.faq-item').forEach(el => {
                 el.classList.remove('active');
-                el.querySelector('.faq-item-content').style.maxHeight = null;
+                const innerContent = el.querySelector('.faq-item-content');
+                if (innerContent) innerContent.style.maxHeight = null;
             });
 
             if (!isOpen) {
@@ -216,6 +223,8 @@ function initFormValidation() {
             if (!errorMsg) {
                 errorMsg = document.createElement('span');
                 errorMsg.className = 'error-message';
+                errorMsg.style.color = '#EF4444';
+                errorMsg.style.fontSize = '0.8rem';
                 formGroup.appendChild(errorMsg);
             }
 
